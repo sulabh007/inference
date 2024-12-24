@@ -122,9 +122,9 @@ def main():
     bert_config = modeling.BertConfig.from_json_file("bert_config.json")
     init_checkpoint = "build/data/bert_tf_v1_1_large_fp32_384_v2/model.ckpt-5474"
 
-    input_ids = tf.placeholder(tf.int32, shape=(1, 384), name="input_ids")
-    input_mask = tf.placeholder(tf.int32, shape=(1, 384), name="input_mask")
-    segment_ids = tf.placeholder(tf.int32, shape=(1, 384), name="segment_ids")
+    input_ids = tf.placeholder(tf.int32, shape=(None, 384), name="input_ids")
+    input_mask = tf.placeholder(tf.int32, shape=(None, 384), name="input_mask")
+    segment_ids = tf.placeholder(tf.int32, shape=(None, 384), name="segment_ids")
 
     logits = create_model(
         bert_config=bert_config,
