@@ -84,7 +84,7 @@ def get_args():
         default=["http://localhost:8000"],
         help="Address of the server(s) under test.",
     )
-
+    print(parser.parse_args())
     args = parser.parse_args()
     return args
 
