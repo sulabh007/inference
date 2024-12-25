@@ -729,4 +729,6 @@ def define_env(env):
 {pre_space} --device={device} {cmd_suffix}
 {f_pre_space}```\n"""
 
+            print("COMMAND", run_cmd)
+
             return run_cmd + run_cmd_extra
